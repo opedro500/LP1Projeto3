@@ -12,7 +12,7 @@ PEDRO JOSÉ CAVALCANTI CABRAL, MATHEUS EUGENIO DE MOURA, LEONAM MEDEIROS DE SOUS
 
 # Sobre o projeto:
 
-O projeto consta com um diretório principal "Projeto2LP1", onde nele está contido: um diretório relacionado aos cabeçalhos, um diretório relacionado aos códigos, um diretório relacinado ao armazenamento dos tecnincos administrativos e professores, o arquivo "main.cpp" (onde está a chamada da função main que faz as chamadas de todas as outras funções do programa) e este arquivo README.
+O projeto consta com um diretório principal "Projeto3LP1", onde nele está contido: um diretório relacionado aos cabeçalhos, um diretório relacionado aos códigos, um diretório relacinado ao armazenamento dos tecnincos administrativos e professores, o arquivo "main.cpp" (onde está a chamada da função main que faz as chamadas de todas as outras funções do programa) e este arquivo README.
 
 No diretório "header" estão contidos os arquivos ".hpp" das classes existentes do programa.
 
@@ -38,6 +38,6 @@ Aparentemente o compilador apresenta um bug quando é passado strings contendo e
 
 * Windows: 
 
-No terminal, entre na pasta "Projeto1LP1" e execute o comando: "g++ .\src\bancoDAO.cpp .\src\endereco.cpp .\src\funcionario.cpp .\src\pessoa.cpp .\src\professor.cpp .\src\tecnicoADM.cpp \src\autenticacao.cpp .\main.cpp -o .\nomeQualquer.exe".
+No terminal, entre na pasta "Projeto1LP1" e execute o comando: "g++ .\src\bancoDAO.cpp .\src\endereco.cpp .\src\funcionario.cpp .\src\pessoa.cpp .\src\professor.cpp .\src\tecnicoADM.cpp .\src\autenticacao.cpp .\main.cpp -o .\nomeQualquer.exe".
 
 Depois, execute: ".\nomeQualquer.exe".
