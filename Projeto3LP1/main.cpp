@@ -31,11 +31,18 @@ int main()
             std::cout << "6 - Deletar tecnico ADM" << std::endl;
             std::cout << "7 - Buscar professor" << std::endl;
             std::cout << "8 - Buscar tecnico" << std::endl;
-            std::cout << "9 - Salvar funcionarios\n"
+            std::cout << "9 - Ajustar salário" << std::endl;
+            std::cout << "10 - Salvar funcionarios\n"
                       << std::endl;
 
             int selecionarOpcao;
             int matricula;
+            int cargo;
+            int operacao;
+            int redefinir;
+            float percentual;
+            float novoSalario;
+
             std::cin >> selecionarOpcao;
 
             if (selecionarOpcao == 1)
@@ -85,6 +92,61 @@ int main()
                 std::cin >> matricula;
 
                 bancoDAO.buscarTecnicoADM(matricula);
+            }
+            else if (selecionarOpcao == 9)
+            {
+                std::cout << "#####################################" << std::endl;
+                std::cout << "Menu de ajuste salarial" << std::endl;
+                std::cout << "Para redefinir o valor do salario digite................1" << std::endl;
+                std::cout << "Para alterar o valor do salario percentualmente digite..2" << std::endl;
+                std::cout << "Tipo de ajuste:" << std::endl;
+                std::cin >> redefinir;
+
+                if (redefinir == 1)
+                {
+                    std::cout << "#####################################" << std::endl;
+                    std::cout << "Digite o cargo do funcionario" << std::endl;
+                    std::cout << "Para professor digite.....1" << std::endl;
+                    std::cout << "Para tecnico ADM digite...2" << std::endl;
+                    std::cout << "cargo do funcionario:" << std::endl;
+                    std::cin >> cargo;
+
+                    std::cout << "#####################################" << std::endl;
+                    std::cout << "Digite a matricula do funcionario:" << std::endl;
+                    std::cin >> matricula;
+
+                    std::cout << "#####################################" << std::endl;
+                    std::cout << "Digite o novo salario do funcionario:" << std::endl;
+                    std::cin >> novoSalario;
+
+                    bancoDAO.ajustaSalario(cargo, matricula, novoSalario);
+                }
+                else
+                {
+                    std::cout << "#####################################" << std::endl;
+                    std::cout << "Digite o cargo do funcionario" << std::endl;
+                    std::cout << "Para professor digite.....1" << std::endl;
+                    std::cout << "Para tecnico ADM digite...2" << std::endl;
+                    std::cout << "cargo do funcionario:" << std::endl;
+                    std::cin >> cargo;
+
+                    std::cout << "#####################################" << std::endl;
+                    std::cout << "Digite a matricula do funcionario:" << std::endl;
+                    std::cin >> matricula;
+
+                    std::cout << "#####################################" << std::endl;
+                    std::cout << "Digite o tipo de operacao a ser feita" << std::endl;
+                    std::cout << "Para redução do salario digite.....1" << std::endl;
+                    std::cout << "Para aumento do salario digite.....2" << std::endl;
+                    std::cout << "operação:" << std::endl;
+                    std::cin >> operacao;
+
+                    std::cout << "#####################################" << std::endl;
+                    std::cout << "Digite o valor percentual da operacao(sem o simbolo %):" << std::endl;
+                    std::cin >> percentual;
+
+                    bancoDAO.ajustaSalario(cargo, matricula, operacao, percentual);
+                }
             }
             else
             {

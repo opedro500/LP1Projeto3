@@ -439,6 +439,116 @@ void BancoDAO::buscarTecnicoADM(int matricula)
     }
 }
 
+void BancoDAO::ajustaSalario(int cargo, int matricula, float novoSal)
+{
+    int encontrou = 0;
+
+    if (cargo == 1)
+    {
+        std::cout << "#####################################" << std::endl;
+
+        for (i = 0; i < professores.size(); i++)
+        {
+            if (matricula == stoi(professores[i].getMatricula()))
+            {
+                professores[i].setSalario(novoSal);
+
+                encontrou++;
+            }
+        }
+
+        if (encontrou == 0)
+        {
+            std::cout << "Erro! Professor(a) inexistente!" << std::endl;
+        }
+    }
+    else
+    {
+
+        std::cout << "#####################################" << std::endl;
+
+        for (i = 0; i < tecnicosADM.size(); i++)
+        {
+            if (matricula == stoi(tecnicosADM[i].getMatricula()))
+            {
+                tecnicosADM[i].setSalario(novoSal);
+
+                encontrou++;
+            }
+        }
+
+        if (encontrou == 0)
+        {
+            std::cout << "Erro! Tecnico(a) inexistente!" << std::endl;
+        }
+    }
+}
+
+void BancoDAO::ajustaSalario(int cargo, int matricula, int operacao, float percentual)
+{
+    float novoSal;
+    int encontrou = 0;
+
+    if (cargo == 1)
+    {
+        std::cout << "#####################################" << std::endl;
+
+        for (i = 0; i < professores.size(); i++)
+        {
+            if (matricula == stoi(professores[i].getMatricula()))
+            {
+                if (operacao == 2)
+                {
+                    novoSal = professores[i].getSalario() + (professores[i].getSalario() * percentual) / 100;
+                    professores[i].setSalario(novoSal);
+                }
+                else
+                {
+                    novoSal = professores[i].getSalario() - (professores[i].getSalario() * percentual) / 100;
+                    professores[i].setSalario(novoSal);
+                }
+
+                encontrou++;
+            }
+        }
+
+        if (encontrou == 0)
+        {
+            std::cout << "Erro! Professor(a) inexistente!" << std::endl;
+        }
+    }
+    else
+    {
+
+        std::cout << "#####################################" << std::endl;
+
+        for (i = 0; i < tecnicosADM.size(); i++)
+        {
+            if (matricula == stoi(tecnicosADM[i].getMatricula()))
+            {
+
+                if (operacao == 2)
+                {
+                    novoSal = tecnicosADM[i].getSalario() + (tecnicosADM[i].getSalario() * percentual) / 100;
+                    tecnicosADM[i].setSalario(novoSal);
+                }
+                else
+                {
+                    novoSal = tecnicosADM[i].getSalario() - (tecnicosADM[i].getSalario() * percentual) / 100;
+                    tecnicosADM[i].setSalario(novoSal);
+                }
+
+                encontrou++;
+            }
+        }
+
+        if (encontrou == 0)
+        {
+            std::cout << "Erro! Tecnico(a) inexistente!" << std::endl;
+        }
+    }
+}
+
 void BancoDAO::lerProfessores()
 {
     std::fstream arquivo;
