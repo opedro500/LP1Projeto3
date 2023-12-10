@@ -58,13 +58,13 @@ public:
     void buscarProfessor(int matricula);
 
     /**
-     * Método para buscar o técnico administrativo armazenados no vector "tecnicosADM" através da matrícula.
+     * @brief Método para buscar o técnico administrativo armazenados no vector "tecnicosADM" através da matrícula.
      * @param matricula Matrícula do técnico administrativo a ser buscado.
      */
     void buscarTecnicoADM(int matricula);
 
     /**
-     * Método para redefinir o salário de um funcionário.
+     * @brief Método para redefinir o salário de um funcionário.
      * @param cargo cargo do funcionário(1 para professor e 2 para tecnico ADM).
      * @param matricula Matrícula do funcionário a ser buscado.
      * @param novoSal novo salário do funcionário.
@@ -72,11 +72,11 @@ public:
     void ajustaSalario(int cargo ,int matricula, float novoSal);
 
     /**
-     * Método para reajustar o salário de um funcionário a partir de um valor percentual.
-     * @param cargo cargo do funcionário(1 para professor e 2 para tecnico ADM).
+     * @brief para reajustar o salário de um funcionário a partir de um valor percentual.
+     * @param cargo Cargo do funcionário(1 para professor e 2 para tecnico ADM).
      * @param matricula Matrícula do funcionário a ser buscado.
-     * @param operacao determina o tipa da operação de ajuste(1 para redução e 2 para aumento).
-     * @param percentual determina o valor percentual do ajuste.
+     * @param operacao Determina o tipa da operação de ajuste(1 para redução e 2 para aumento).
+     * @param percentual Determina o valor percentual do ajuste.
      */
     void ajustaSalario(int cargo ,int matricula, int operacao, float percentual);
 

@@ -19,7 +19,13 @@ public:
     Autenticacao(const std::string &usuarioPadrao, const std::string &senhaPadrao)
         : usuarioPadrao_(usuarioPadrao), senhaPadrao_(senhaPadrao) {}
 
-    bool realizarAutenticacao(const std::string &usuario, const std::string &senha);
+    /**
+     * @brief Método para realizar autenticação do nome de usuário e senha digitado pelo usuário.
+     * @param usuario Nome de usuário digitado pelo usuário.
+     * @param senha Senha digitada pelo usuário.
+     * @return retorno booleano.
+     */
+    bool realizarAutenticacao(std::string usuario, std::string senha);
 };
 
 #endif
