@@ -1,41 +1,52 @@
 #include <iostream>
 #include "../header/tecnicoADM.hpp"
 
-TecnicoADM::TecnicoADM(float adicionalProdutividadeInicial, std::string funcaoDesempenhadaInical)
+template <typename T>
+TecnicoADM<T>::TecnicoADM(T adicionalProdutividadeInicial, std::string funcaoDesempenhadaInical)
 {
     adicionalProdutividade = adicionalProdutividadeInicial;
     funcaoDesempenhada = funcaoDesempenhadaInical;
 }
 
-TecnicoADM::TecnicoADM()
+template <typename T>
+TecnicoADM<T>::TecnicoADM()
 {
 }
 
-TecnicoADM::~TecnicoADM()
+template <typename T>
+TecnicoADM<T>::~TecnicoADM()
 {
 }
 
-float TecnicoADM::getAdicionalProdutividade()
+template <typename T>
+T TecnicoADM<T>::getAdicionalProdutividade()
 {
     return adicionalProdutividade;
 }
 
-void TecnicoADM::setAdicionalProdutividade(float novoAdicionalProdutividade)
+template <typename T>
+void TecnicoADM<T>::setAdicionalProdutividade(T novoAdicionalProdutividade)
 {
     adicionalProdutividade = novoAdicionalProdutividade;
 }
 
-std::string TecnicoADM::getFuncaoDesepenhada()
+template <typename T>
+std::string TecnicoADM<T>::getFuncaoDesepenhada()
 {
     return funcaoDesempenhada;
 }
 
-void TecnicoADM::setFuncaoDesepenhada(std::string novaFuncaoDesempenhada)
+template <typename T>
+void TecnicoADM<T>::setFuncaoDesepenhada(std::string novaFuncaoDesempenhada)
 {
     funcaoDesempenhada = novaFuncaoDesempenhada;
 }
 
-void TecnicoADM::estaTrabalhando() const
+template <typename T>
+void TecnicoADM<T>::estaTrabalhando() const
 {
     std::cout << "O tecnico administrativo esta trabalhando nesse momento!" << std::endl;
-};
+}
+
+template class TecnicoADM<float>;
+template class TecnicoADM<int>;

@@ -2,7 +2,7 @@
 #include <fstream>
 #include "../header/autenticacao.hpp"
 
-bool Autenticacao::realizarAutenticacao(std::string usuario, std::string senha)
+bool Autenticacao::realizarAutenticacao(const std::string &usuario, const std::string &senha)
 {
     try
     {

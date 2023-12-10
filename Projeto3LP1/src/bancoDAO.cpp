@@ -3,7 +3,7 @@
 #include "../header/bancoDAO.hpp"
 
 std::vector<Professor> professores;
-std::vector<TecnicoADM> tecnicosADM;
+std::vector<TecnicoADM<float>> tecnicosADM;
 
 std::string s;
 int i;
@@ -213,7 +213,7 @@ void BancoDAO::cadastrarTecnicoADM()
         std::cout << "Adicional de produtividade esta como padrao (0.25):" << std::endl;
     }
 
-    TecnicoADM *tecnicoADM = new TecnicoADM(f, s);
+    TecnicoADM<float> *tecnicoADM = new TecnicoADM<float>(f, s);
 
     std::cout << "Digite o nome do(a) tecnico(a) administrativo(a) a ser cadastrado(a):" << std::endl;
     std::cin >> s;
@@ -620,7 +620,7 @@ void BancoDAO::lerTecnicosADM()
     {
         for (int i = 0; i < linhas.size(); i += 16)
         {
-            TecnicoADM *tecnicoADM = new TecnicoADM(stof(linhas[i]), linhas[i + 1]);
+            TecnicoADM<float> *tecnicoADM = new TecnicoADM<float>(stof(linhas[i]), linhas[i + 1]);
 
             tecnicoADM->setNome(linhas[i + 2]);
             tecnicoADM->setCpf(linhas[i + 3]);

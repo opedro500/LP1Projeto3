@@ -10,19 +10,24 @@
  * @since 12/07/2023
  * @version 1.0
  */
+template <typename T>
 class TecnicoADM : public Funcionario
 {
-    
+
 private:
-    float adicionalProdutividade = 0.25;
+    T adicionalProdutividade = static_cast<T>(0.25);
     std::string funcaoDesempenhada;
 
 public:
-    TecnicoADM(float adicionalProdutividade, std::string funcaoDesempenhada);
+    TecnicoADM(T adicionalProdutividade, std::string funcaoDesempenhada);
+
     TecnicoADM();
     ~TecnicoADM();
-    float getAdicionalProdutividade();
-    void setAdicionalProdutividade(float adicionalProdutividade);
+
+    T getAdicionalProdutividade();
+
+    void setAdicionalProdutividade(T adicionalProdutividade);
+
     std::string getFuncaoDesepenhada();
     void setFuncaoDesepenhada(std::string funcaoDesempenhada);
     void estaTrabalhando() const override;
