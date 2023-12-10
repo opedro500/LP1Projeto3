@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projeto3Lp1: BancoDAO Class Reference</title>
+<title>My Project: BancoDAO Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Projeto3Lp1<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">My Project<span id="projectnumber">&#160;1.0</span>
    </div>
   </td>
  </tr>
@@ -122,10 +122,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad8ada3935027526ce7465e123714e8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para buscar o professor armazenado no vector "professores" através da matrícula.  <br /></td></tr>
 <tr class="separator:ad8ada3935027526ce7465e123714e8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01b0b375a7d9bfc879627ffa5bce4c01" id="r_a01b0b375a7d9bfc879627ffa5bce4c01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_banco_d_a_o.html#a01b0b375a7d9bfc879627ffa5bce4c01">buscarTecnicoADM</a> (int matricula)</td></tr>
+<tr class="memdesc:a01b0b375a7d9bfc879627ffa5bce4c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para buscar o técnico administrativo armazenados no vector "tecnicosADM" através da matrícula.  <br /></td></tr>
 <tr class="separator:a01b0b375a7d9bfc879627ffa5bce4c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a779728596cc3260fa78133c681a1bd27" id="r_a779728596cc3260fa78133c681a1bd27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_banco_d_a_o.html#a779728596cc3260fa78133c681a1bd27">ajustaSalario</a> (int cargo, int matricula, float novoSal)</td></tr>
+<tr class="memdesc:a779728596cc3260fa78133c681a1bd27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para redefinir o salário de um funcionário.  <br /></td></tr>
 <tr class="separator:a779728596cc3260fa78133c681a1bd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1e512f2414f16ed27142aa8661d1e0f" id="r_ae1e512f2414f16ed27142aa8661d1e0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_banco_d_a_o.html#ae1e512f2414f16ed27142aa8661d1e0f">ajustaSalario</a> (int cargo, int matricula, int operacao, float percentual)</td></tr>
+<tr class="memdesc:ae1e512f2414f16ed27142aa8661d1e0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">para reajustar o salário de um funcionário a partir de um valor percentual.  <br /></td></tr>
 <tr class="separator:ae1e512f2414f16ed27142aa8661d1e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8ec917b5cdbd3c87ed473268b7b6cb9" id="r_ac8ec917b5cdbd3c87ed473268b7b6cb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_banco_d_a_o.html#ac8ec917b5cdbd3c87ed473268b7b6cb9">lerProfessores</a> ()</td></tr>
 <tr class="memdesc:ac8ec917b5cdbd3c87ed473268b7b6cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para ler o arquivo "professores.txt" ao iniciar o programa.  <br /></td></tr>
@@ -319,7 +322,9 @@ Leonam Medeiros de Sousa. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Método para redefinir o salário de um funcionário. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Método para redefinir o salário de um funcionário. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cargo</td><td>cargo do funcionário(1 para professor e 2 para tecnico ADM). </td></tr>
     <tr><td class="paramname">matricula</td><td>Matrícula do funcionário a ser buscado. </td></tr>
@@ -367,12 +372,14 @@ Leonam Medeiros de Sousa. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Método para reajustar o salário de um funcionário a partir de um valor percentual. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>para reajustar o salário de um funcionário a partir de um valor percentual. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cargo</td><td>cargo do funcionário(1 para professor e 2 para tecnico ADM). </td></tr>
+    <tr><td class="paramname">cargo</td><td>Cargo do funcionário(1 para professor e 2 para tecnico ADM). </td></tr>
     <tr><td class="paramname">matricula</td><td>Matrícula do funcionário a ser buscado. </td></tr>
-    <tr><td class="paramname">operacao</td><td>determina o tipa da operação de ajuste(1 para redução e 2 para aumento). </td></tr>
-    <tr><td class="paramname">percentual</td><td>determina o valor percentual do ajuste. </td></tr>
+    <tr><td class="paramname">operacao</td><td>Determina o tipa da operação de ajuste(1 para redução e 2 para aumento). </td></tr>
+    <tr><td class="paramname">percentual</td><td>Determina o valor percentual do ajuste. </td></tr>
   </table>
   </dd>
 </dl>
@@ -420,7 +427,9 @@ Leonam Medeiros de Sousa. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Método para buscar o técnico administrativo armazenados no vector "tecnicosADM" através da matrícula. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Método para buscar o técnico administrativo armazenados no vector "tecnicosADM" através da matrícula. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">matricula</td><td>Matrícula do técnico administrativo a ser buscado. </td></tr>
   </table>
@@ -653,8 +662,8 @@ Leonam Medeiros de Sousa. </dd></dl>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/Pedro/Desktop/Meu/Faculdade/LP1/LP1Prova3/Projeto3LP1/header/<a class="el" href="banco_d_a_o_8hpp_source.html">bancoDAO.hpp</a></li>
-<li>C:/Users/Pedro/Desktop/Meu/Faculdade/LP1/LP1Prova3/Projeto3LP1/src/<a class="el" href="banco_d_a_o_8cpp.html">bancoDAO.cpp</a></li>
+<li>Meu/Faculdade/LP1/LP1Prova3/Projeto3LP1/header/<a class="el" href="banco_d_a_o_8hpp_source.html">bancoDAO.hpp</a></li>
+<li>Meu/Faculdade/LP1/LP1Prova3/Projeto3LP1/src/<a class="el" href="banco_d_a_o_8cpp.html">bancoDAO.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
